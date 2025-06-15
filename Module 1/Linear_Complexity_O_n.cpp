@@ -44,3 +44,16 @@ int main()
     // so we can say the complexity is O(n)
     // Total complexity: O(n)
 }
+
+// 
+/*
+readme.md file 
+# Linear Complexity O(n)
+This code demonstrates linear complexity O(n) in C++. It reads an integer `n` and prints numbers from 1 to `n` with a step of 2, showcasing how the complexity grows linearly with the input size.
+## Example Usage
+To run the code, compile it with a C++ compiler and provide an integer input. The program will output numbers from 1 to `n` with a step of 2.   
+## Complexity Analysis
+The complexity of the code is O(n)  , where `n` is the input integer. The loop iterates `n/2` times, leading to linear growth in execution time as `n` increases.
+## Related Information
+This code is part of a series demonstrating different complexities in algorithms, including O(1), O(log n), and O(n log n).     
+*/
