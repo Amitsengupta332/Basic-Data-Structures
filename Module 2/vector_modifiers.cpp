@@ -12,8 +12,8 @@ int main()
     //  replace(v.begin(), v.end(), 2, 100);
     //  replace(v.begin(), v.end()-2, 2, 100);
 
-    auto it = find(v.begin(), v.end(), 5);
-    cout << *it << endl;
+    // auto it = find(v.begin(), v.end(), 5);
+    // cout << *it << endl;
     // if ( it == v.end()){
     //     cout << "Not found" << endl;
     // }else{
@@ -39,6 +39,13 @@ int main()
     // {
     //     cout << x << " ";
     // }
+
+    for (auto it = v.begin(); it <v.end(); it++)
+    {
+        cout << *it << " ";
+        /* code */
+    }
+    
 
     return 0;
 }
