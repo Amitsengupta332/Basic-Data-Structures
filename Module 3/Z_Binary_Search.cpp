@@ -13,20 +13,46 @@ int main()
         /* code */
     }
 
+    sort(arr, arr + n);
+
     for (int i = 0; i < q; i++)
     {
-        int x;
-        cin >> x;
+        int val;
+        cin >> val;
         int flag = 0;
-        for (int i = 0; i < n; i++)
-        {
+        // Using binary search
 
-            if (arr[i] == x)
+        // Using binary search
+        int l = 0, r = n - 1;
+
+        while (l <= r)
+        {
+            int mid = (l + r) / 2;
+            if (arr[mid] == val)
             {
                 flag = 1;
+                break;
             }
-            /* code */
+            else if (arr[mid] > val)
+            {
+                r = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
+            }
         }
+
+        // linear search
+        // for (int i = 0; i < n; i++)
+        // {
+
+        //     if (arr[i] == x)
+        //     {
+        //         flag = 1;
+        //     }
+        //     /* code */
+        // }
 
         if (flag == 1)
         {
