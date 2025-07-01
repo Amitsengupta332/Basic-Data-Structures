@@ -1,19 +1,74 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void rec(int i, int n)
+class Node
 {
-    // base case
-    if(i>n){
+public:
+    int val;
+    Node *next;
+
+    Node(int val)
+    {
+        this->val = val;
+        this->next = NULL;
+    }
+};
+
+void insert_a_tail(Node *&head, Node *&tail, int val) // Notice the & for reference
+{
+
+    Node *newNode = new Node(val);
+
+    if (head == NULL)
+    {
+        head = newNode;
+        tail = newNode; // If the list was empty, head and tail point to the new node
         return;
     }
-    rec(i + 1, n);
-    cout << i << endl;
+
+    tail->next = newNode;
+    tail = newNode; // Update the tail to point to the new node
 }
 
+void Print_Linked_List(Node *head)
+{
+    Node *temp = head;
+
+    while (temp != NULL)
+    {
+        cout << temp->val << endl;
+        temp = temp->next;
+    }
+}
+
+void print_reversed(Node *tmp)
+{
+    // base case
+    if (tmp == NULL)
+    {
+        return;
+    }
+    print_reversed(tmp->next);
+    cout << tmp->val << endl;
+}
 int main()
 {
-    int n = 5;
-    rec(1, n);
+
+    Node *head = NULL;
+    Node *tail = NULL;
+
+    int val;
+    while (true)
+    {
+        cin >> val;
+        if (val == -1)
+        {
+            break;
+        }
+        insert_a_tail(head, tail, val);
+    }
+    // Print_Linked_List(head);
+    print_reversed(head);
+
     return 0;
 }
