@@ -46,6 +46,16 @@ int find_Index_of_x(Node *head, int x)
     return -1;
 }
 
+void deleteList(Node *head)
+{
+    while (head)
+    {
+        Node *next = head->next;
+        delete head;
+        head = next;
+    }
+}
+
 int main()
 {
     int t;
@@ -71,13 +81,15 @@ int main()
         cin >> x;
 
         cout << find_Index_of_x(head, x) << endl;
-        Node *temp = head;
-        while (temp != NULL)
-        {
-            Node *nextNode = temp->next;
-            delete temp;
-            temp = nextNode;
-        }
+
+        deleteList(head);
+        // Node *temp = head;
+        // while (temp != NULL)
+        // {
+        //     Node *nextNode = temp->next;
+        //     delete temp;
+        //     temp = nextNode;
+        // }
     }
 
     return 0;
