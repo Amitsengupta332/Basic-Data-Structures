@@ -83,13 +83,7 @@ int main()
         cout << find_Index_of_x(head, x) << endl;
 
         deleteList(head);
-        // Node *temp = head;
-        // while (temp != NULL)
-        // {
-        //     Node *nextNode = temp->next;
-        //     delete temp;
-        //     temp = nextNode;
-        // }
+      
     }
 
     return 0;
