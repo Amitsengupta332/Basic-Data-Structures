@@ -40,6 +40,16 @@ void Print_Linked_List(Node *head)
     }
 }
 
+void deleteList(Node *head)
+{
+    while (head)
+    {
+        Node *next = head->next;
+        delete head;
+        head = next;
+    }
+}
+
 int main()
 {
     Node *head = NULL;
@@ -75,13 +85,6 @@ int main()
 
     cout << (maxVal - minVal) << endl;
 
-    // Free the allocated memory
-    temp = head;
-    while (temp != NULL)
-    {
-        Node *nextNode = temp->next;
-        delete temp;
-        temp = nextNode;
-    }
+    deleteList(head);
     return 0;
 }
