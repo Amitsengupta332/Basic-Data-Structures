@@ -14,7 +14,7 @@ public:
     }
 };
 
-void insert_a_head(Node *&head, int val)  // Notice the & for reference
+void insert_a_head(Node *&head, int val)  
 {
     Node *newNode = new Node(val);
     newNode->next = head;
@@ -35,6 +35,17 @@ void insert_a_tail(Node *&head, Node *&tail, int val)
     tail->next = newNode;
     tail = newNode;
 }
+
+void Print_Linked_List(Node *head)
+{
+    Node *temp = head;
+
+    while (temp != NULL)
+    {
+        cout << temp->val << " ";
+        temp = temp->next;
+    }
+}
 int main()
 {
     Node *head = NULL;
@@ -50,6 +61,8 @@ int main()
         }
         insert_a_tail(head, tail, val);
     }
+
+    Print_Linked_List(head);
 
     return 0;
 }
