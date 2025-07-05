@@ -41,6 +41,34 @@ void Print_Linked_List(Node *head)
     }
 }
 
+void remove_duplicates(Node *head)
+{
+    Node *current = head;
+
+    while (current != NULL)
+    {
+        Node *prev = current;
+        Node *tmp = current->next;
+
+        while (tmp != NULL)
+        {
+            if (tmp->val == current->val)
+            {
+                Node *delNode = tmp;
+                prev->next = tmp->next;
+                tmp = tmp->next;
+                delete delNode;
+            }
+            else
+            {
+                prev = tmp;
+                tmp = tmp->next;
+            }
+        }
+        current = current->next;
+    }
+}
+
 void deleteList(Node *head)
 {
     while (head)
@@ -66,5 +94,9 @@ int main()
         }
         insert_a_tail(head, tail, val);
     }
+
+    remove_duplicates(head);
+    Print_Linked_List(head);
+    deleteList(head);
     return 0;
 }
