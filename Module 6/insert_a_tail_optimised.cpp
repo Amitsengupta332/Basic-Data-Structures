@@ -19,7 +19,7 @@ void insert_a_tail(Node *&head, Node *&tail, int val) // Notice the & for refere
 
     Node *newNode = new Node(val);
 
-    if (head == NULL)
+    if (head == NULL) 
     {
         head = newNode;
         tail = newNode; // If the list was empty, head and tail point to the new node
