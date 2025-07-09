@@ -42,7 +42,7 @@ void Print_Linked_List(Node *head)
     }
 }
 
-void  reversed_linked_list(Node* &head, Node* tmp)
+void  reversed_linked_list(Node* &head,Node* &tail, Node* tmp)
 {
     // base case
     if (tmp->next == NULL)
@@ -50,9 +50,10 @@ void  reversed_linked_list(Node* &head, Node* tmp)
         head = tmp;
         return;
     }
-    reversed_linked_list(head,tmp->next);
+    reversed_linked_list(head,tail, tmp->next);
     tmp->next->next = tmp;
     tmp->next = NULL;
+    tail = tmp;
     // cout << tmp->val << endl;
 }
 int main()
@@ -72,9 +73,10 @@ int main()
         insert_a_tail(head, tail, val);
     }
     // Print_Linked_List(head);
-    reversed_linked_list(head, head);
+    reversed_linked_list(head,tail,  head);
     // Print_Linked_List(head);
     cout << head->val << " ";
+    cout << tail->val << " ";
 
     return 0;
 }
