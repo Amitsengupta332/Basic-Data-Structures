@@ -1,0 +1,9 @@
+1. Optimise and hadle corner case:
+ i) Insert a head
+ ii) insert a tail
+ iii) insert at any pos
+ iv) delete at head
+ v) delete at tail
+ vi) delete at any pos
+
+ 2) Module 10.5 -> practice problem
