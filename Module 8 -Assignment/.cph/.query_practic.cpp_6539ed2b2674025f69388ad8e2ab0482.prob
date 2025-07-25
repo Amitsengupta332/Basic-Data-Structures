@@ -1,0 +1,1 @@
+{"name":"Local: query_practic","url":"d:\\Phitron\\Basic DSA\\Module 8 -Assignment\\query_practic.cpp","tests":[{"id":1751644082722,"input":"10 20 30 -1\n7\n1 40\n5 50\n4 50\n0 100\n7 40\n1 110\n7 40\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Phitron\\Basic DSA\\Module 8 -Assignment\\query_practic.cpp","group":"local","local":true}

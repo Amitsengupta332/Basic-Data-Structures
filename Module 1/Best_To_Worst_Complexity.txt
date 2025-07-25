@@ -1,0 +1,20 @@
+N = 1000
+
+
+
+Constant :  O(1)     -> 1       => 1
+Linear :    O(N)     -> 1000    => 4                     
+Logarithmic: O(logN)   -> 10    => 2
+Square Root : O(sqrt(N)) -> 32  => 3
+Quadratic : O(N*N) -> 1000000   => 6
+Linearithmatic : O(NlogN) -> 10000    => 5
+
+
+Best To Worst Serial: 
+
+Constant:       O(1) 
+Logarithmic:    O(logN)
+Square Root:    O(sqrt(N))
+Linear:         O(N) 
+Linearithmatic: O(NlogN)
+Quadratic:      O(N*N)/O(N*M)

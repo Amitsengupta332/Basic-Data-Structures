@@ -1,0 +1,13 @@
+https://docs.google.com/document/d/1McYLCx7BcrMBsqTCuioWK2FnopEBgXzG1B35Hfwlfzk/edit?tab=t.0
+
+
+in complexity array  singly double the operation are same in :
+insert an any position, delete at any position and insert a tail.
+
+insert at head ==> array are bad, singly and doubly better.
+delete at head ==>  array are bad, singly and doubly better.
+delete at tail ==> singly are bad, array and doubly better.
+
+
+N.B => doubly are always Better. 
+
