@@ -21,8 +21,8 @@ void postOrder(Node *root)
     if (root == NULL)
         return;
     postOrder(root->left);      // left
-    cout << root->val << " "; // root
     postOrder(root->right);     // right
+    cout << root->val << " "; // root
 }
 
 int main()
