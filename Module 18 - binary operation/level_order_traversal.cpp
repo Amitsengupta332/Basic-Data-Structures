@@ -29,10 +29,14 @@ void level_order(Node *root)
         // 2. oi node k niye kaj kora
         cout << f->val << " ";
         //  3. children k push kora
-        if (f->left != NULL)
+        if (f->left)
             q.push(f->left);
-        if (f->right != NULL)
+        if (f->right)
             q.push(f->right);
+        // if (f->left != NULL)
+        //     q.push(f->left);
+        // if (f->right != NULL)
+        //     q.push(f->right);
     }
 }
 
