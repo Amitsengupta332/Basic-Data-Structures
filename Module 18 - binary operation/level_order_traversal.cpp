@@ -18,6 +18,11 @@ public:
 
 void level_order(Node *root)
 {
+    if (root == NULL)
+    {
+        cout << "Tree is empty" << endl;
+        return;
+    }
     queue<Node *> q;
     q.push(root);
 
