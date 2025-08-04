@@ -105,6 +105,10 @@ void insert(Node *&root, int val)
     }
 }
 
+
+//10 6 23 -1 9 19 29 7 -1 12 -1 -1 35 -1 -1 -1 -1 -1 -1
+// 21
+
 int main()
 {
     Node *root = input_tree();

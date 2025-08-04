@@ -41,8 +41,7 @@ Node *convert(int arr[], int n, int l, int r)
     if (l > r)
         return NULL;
 
-    int mid = (l + r) / 2;
-
+    int mid = l + r / 2;
     Node *root = new Node(arr[mid]);
     Node *leftRoot = convert(arr, n, l, mid - 1);
     Node *rightRoot = convert(arr, n, mid + 1, r);
