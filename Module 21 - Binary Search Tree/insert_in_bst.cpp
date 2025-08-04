@@ -5,8 +5,8 @@ class Node
 {
 public:
     int val;
-    Node *left;
-    Node *right;
+    Node* left;
+    Node* right;
 
     Node(int val)
     {
@@ -59,42 +59,13 @@ Node *input_tree()
     return root;
 }
 
-bool search(Node *root, int val)
+void insert(Node *root, int val)
 {
-    if (root == NULL)
-        return false;
-    if (root->val == val)
-        return true;
-
-    if (root->val > val)
-    {
-        return search(root->left, val);
-
-        // bool l = search(root->left, val);
-        // return l;
-    }
-    else
-    {
-        return search(root->right, val);
-
-        // bool r = search(root->right, val);
-        // return r;
-    }
+    
 }
-
-//18 7 21 -1 12 20 26 9 15 -1 -1 -1 -1 -1 -1 -1 -1
-// 15
 
 int main()
 {
-    Node *root = input_tree();
-    int val;
-    cin >> val;
-
-    if (search(root, val))
-        cout << "Found" << endl;
-    else
-        cout << "Not Found" << endl;
-
+  
     return 0;
 }
