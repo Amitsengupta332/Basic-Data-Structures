@@ -24,7 +24,7 @@ public:
         // return l.marks > r.marks;
         if (l.marks > r.marks)
             return true;
-        else if(l.marks < r.marks)
+        else if (l.marks < r.marks)
             return false;
         else
         {
@@ -56,3 +56,12 @@ int main()
 
     return 0;
 }
+
+/*
+3
+sakib 8 84
+rakib 2 89
+tamim 1 90
+
+
+*/
